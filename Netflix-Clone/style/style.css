@@ -16,7 +16,7 @@ body{
     background-color: var(--preto);
     color: #fff;
 
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 18px;
 }
 
@@ -34,6 +34,7 @@ h1{
 /*Header*/
 header .container{
     justify-content: space-between;
+    padding: 0 20px;
 }
 
 header .container .logo{
@@ -57,11 +58,11 @@ header .container nav a:hover{
 
 /*Banner*/
 main{
-    height: 65vh;
+    height: 60vh;
 }
 
 main .banner{
-    background: url('../img/capa-house.jpg'),linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%);
+    background: url('../img/capa-house.jpg');
     background-size: cover;
 
     height: 100%;
@@ -69,6 +70,8 @@ main .banner{
 
 main .banner .container{
     height: 100%;
+
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%);
 
     flex-direction: column;
     justify-content: center;
@@ -79,6 +82,7 @@ main .banner .container{
 
 main .banner .container .main-movie{
     margin-bottom: 40px;
+    width: 70%;
 }
 
 main .banner .container .main-movie .title{
@@ -92,18 +96,22 @@ main .banner .container .main-movie .description{
     margin-bottom: 2rem;
 }
 
+main .banner .container .buttons{
+    margin-bottom: 30px;
+}
+
 main .banner .container .buttons .btn{
     font-weight: bold;
 
     color: #fff;
-    background-color: rgba(0,0,0,.50);
+    background-color: rgba(0,0,0,.60);
 
     border: none;
     padding: 1rem 2rem;
-    margin-right: 1rem;
+    margin-right: 4rem;
 
     font-size: .8rem;
-    transition: .3s ease-out;
+    transition: .2s ease-out;
 }
 
 main .banner .container .buttons .btn:hover{
@@ -113,4 +121,50 @@ main .banner .container .buttons .btn:hover{
 
 main .banner .container .buttons .btn i{
     margin-right: 8px;
+}
+
+/*Content*/
+.box-film{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+main .movies-slider{
+    margin-top: 5px;
+}
+
+main .movies-slider div h2{
+    margin: 12px 0 5px 5px;
+
+    font-size: 1.2rem;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 700px) {
+    header .container{
+        flex-direction: column;
+    }
+
+    .btn{
+        margin-top: 5px;
+    }
+
+    main .banner .container{
+        padding-left: 15px;
+    }
+
+    main .banner .container .main-movie{
+        margin: 0;
+    }
+
+    main .banner .container .main-movie .title{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+   .description{
+       width: 50%;
+   }
 }

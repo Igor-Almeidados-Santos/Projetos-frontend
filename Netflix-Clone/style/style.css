@@ -1,0 +1,116 @@
+:root{/*As variáveis são definidas no elemento root*/
+    --vermelho: #e50914;
+    --preto: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--preto);
+    color: #fff;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 3.6rem;
+}
+
+/*Header*/
+header .container{
+    justify-content: space-between;
+}
+
+header .container .logo{
+    color: var(--vermelho);
+
+    font-family: 'Arial Black', Times;
+    font-size: 2.6rem;
+
+    margin-left: 10px;
+}
+
+header .container nav a{
+    color: #aaa;
+
+    margin-right: 10px;
+}
+
+header .container nav a:hover{
+    color: #fff;
+}
+
+/*Banner*/
+main{
+    height: 65vh;
+}
+
+main .banner{
+    background: url('../img/capa-house.jpg'),linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%);
+    background-size: cover;
+
+    height: 100%;
+}
+
+main .banner .container{
+    height: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 30px
+}
+
+main .banner .container .main-movie{
+    margin-bottom: 40px;
+}
+
+main .banner .container .main-movie .title{
+    margin-top: 15%;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main .banner .container .main-movie .description{
+    margin-top: .8rem;
+    margin-bottom: 2rem;
+}
+
+main .banner .container .buttons .btn{
+    font-weight: bold;
+
+    color: #fff;
+    background-color: rgba(0,0,0,.50);
+
+    border: none;
+    padding: 1rem 2rem;
+    margin-right: 1rem;
+
+    font-size: .8rem;
+    transition: .3s ease-out;
+}
+
+main .banner .container .buttons .btn:hover{
+    background-color: #fff;
+    color: rgba(0,0,0,.50);
+}
+
+main .banner .container .buttons .btn i{
+    margin-right: 8px;
+}
